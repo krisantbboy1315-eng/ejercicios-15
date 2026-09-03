@@ -1,0 +1,3 @@
+package gestionFiguras;
+import figuras.*;
+public class App { public static void main(String[] args) { FiguraCompuesta nivel3=new FiguraCompuesta(); nivel3.agregar(new Circulo(2)); nivel3.agregar(new Cuadrado(3)); FiguraCompuesta nivel2=new FiguraCompuesta(); nivel2.agregar(new Rectangulo(2,5)); nivel2.agregar(nivel3); FiguraCompuesta nivel1=new FiguraCompuesta(); nivel1.agregar(new Cuadrado(4)); nivel1.agregar(new Circulo(1)); nivel1.agregar(new Rectangulo(1,7)); nivel1.agregar(nivel2); System.out.println("Area: "+nivel1.area()); System.out.println("Perimetro: "+nivel1.perimetro()); System.out.println("Area al doble: "+nivel1.escalar(2).area()); } }
