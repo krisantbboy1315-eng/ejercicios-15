@@ -1,0 +1,2 @@
+package vehiculos;
+public class VehiculoAnfibio extends Vehiculo { private String medio="tierra"; public VehiculoAnfibio(String n,double p,double po){super(n,p,po);} public void cambiarMedio(String nuevo){medio=nuevo;} public double velocidadMaxima(){return medio.equals("tierra")?potencia-peso/100:potencia-peso/200;} public double consumo(){return medio.equals("tierra")?10+peso/1000:15+peso/2000;} public void recorrer(double km){System.out.println(medio+": "+(consumo()*km/100)+" litros");} }
